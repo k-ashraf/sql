@@ -10,6 +10,9 @@ service mysql start # or  'systemctl start mysql' if systemd is installed
 mysql 
 # To allow remote connections from root user to mysql server
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'P@ssw0rd';
+# Connect by a password
+mysql -u (user_name) -p(your-password)
+-u for user && -p for password
 
 # to list the current databases
 SHOW DATABASES;
