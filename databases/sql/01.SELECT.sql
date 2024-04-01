@@ -39,7 +39,7 @@ SELECT 5 % 2;
 -- boolean
 SELECT 1 = 2;
 
-SELECT 1 <> 2;
+SELECT 1 <> 2;  -- != (<>) not equal
 
 SELECT 'Hello, SQL' = 'Hello, SQL';
 
@@ -47,7 +47,9 @@ SELECT 'hello, sql' = 'Hello, SQL';
 
 SELECT 'Hello, SQL' LIKE 'Hello, SQL';
 
-SELECT 'Hello, SQL' LIKE 'Hello, %';
+SELECT 'Hello, SQL' LIKE 'Hello, %'; -- (white card)
+
+SELECT "hello" LIKE "kareem";
 
 
 
@@ -66,7 +68,7 @@ SELECT 'a' like  'ä' COLLATE utf8mb4_cs_0900_as_cs;
 SELECT ABS(-5); -- absolute values
 SELECT ASCII('a'), ASCII('ä');
 SELECT ASCII('ab');
-SELECT CHAR(57);
+SELECT CHAR(97);
 SELECT CHAR(ASCII('d'));
 
 -- date and time functions
@@ -77,6 +79,9 @@ SELECT
     DAYNAME('2022-12-08'),
     MONTH('2022-12-08'),
     MONTHNAME('2022-12-08');
+
+SELECT DAYNAME('2001-10-31');
+
 SELECT CURDATE();
 
 -- string functions
@@ -90,7 +95,7 @@ SELECT RIGHT('This is the a text', 10);
 SELECT SUBSTR('This is a long text', 6, 10);
 SELECT TRIM('  bar   ');
 SELECT TRIM(LEADING 'x' FROM 'xbarx');
-SELECT TRIM(TRAILING 'x' FROM 'xbarx');
+SELECT TRIM(TRAILING 'rx' FROM 'xbarx');
 SELECT TRIM(BOTH 'x' FROM 'xbarx');
 
 
